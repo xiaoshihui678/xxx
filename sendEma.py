@@ -36,7 +36,7 @@ class SendEmail(Base):
 
 url = 'https://mail.qq.com/'
 # driver = webdriver.Firefox(r'/Applications/Firefox.app/Contents/MacOS/firefox')
-driver = webdriver.Chrome()
+driver = webdriver.Chrome('/Users/xshsapple/Downloads/chromedriver')
 driver.get(url)
 driver.maximize_window()
 s = SendEmail(driver)
