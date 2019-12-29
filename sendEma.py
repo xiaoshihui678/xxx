@@ -23,11 +23,13 @@ class SendEmail(Base):
 
     def send(self):
         # self.findElement(self.loginIn).click()
+        self.driver.implicitly.wait(5)
         self.driver.switch_to.frame('login_frame')
         self.findElement(self.usr).send_keys('568582494')
         self.findElement(self.pwd).send_keys('xiaoshihui666')
         self.findElement(self.login_btn).click()
         self.findElement(self.write_em).click()
+        self.driver.implicitly.wait(5)
         self.driver.switch_to.frame('mainFrame')
         self.findElement(self.person).send_keys('450837357@qq.com')
         self.findElement(self.item).send_keys('@qq.com')
