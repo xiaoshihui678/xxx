@@ -32,13 +32,13 @@ class SendEmail(Base):
         self.driver.implicitly_wait(5)
         self.driver.switch_to.frame('mainFrame')
         self.findElement(self.person).send_keys('450837357@qq.com')
-        self.findElement(self.item).send_keys('@qq.com')
+        self.findElement(self.item).send_keys('浦建你是傻逼吗，收到请回答')
         self.findElement(self.send_btn).click()
 
 
 url = 'https://mail.qq.com/'
 # driver = webdriver.Firefox(r'/Applications/Firefox.app/Contents/MacOS/firefox')
-driver = webdriver.Chrome('C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe')
+driver = webdriver.Chrome(r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe')
 driver.get(url)
 driver.maximize_window()
 s = SendEmail(driver)
