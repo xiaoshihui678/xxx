@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import threading
+from selenium.webdriver.support.ui import WebDriverWait
+
 
 
 list = {'http://192.168.1.10:6666/wd/hub',
